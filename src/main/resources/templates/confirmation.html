@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order Confirmed</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<header>
+    <a class="brand" th:href="@{/}">Point of Sale</a>
+    <a th:href="@{/cart}">Cart (<span th:text="${cartCount}">0</span>)</a>
+</header>
+<main>
+    <h1>Thank you for your order!</h1>
+    <p>Order number: <strong th:text="${orderNumber}">ABC12345</strong></p>
+    <p>Total charged: <strong th:text="${'$' + #numbers.formatDecimal(total, 1, 2)}">$0.00</strong></p>
+    <p><a th:href="@{/}">Back to the shop</a></p>
+</main>
+</body>
+</html>

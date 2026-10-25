@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Point of Sale</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<header>
+    <a class="brand" th:href="@{/}">Point of Sale</a>
+    <a th:href="@{/cart}">Cart (<span th:text="${cartCount}">0</span>)</a>
+</header>
+<main>
+    <h1>Products</h1>
+    <div class="grid">
+        <div class="card" th:each="p : ${products}">
+            <h3 th:text="${p.name}">Name</h3>
+            <p class="desc" th:text="${p.description}">Description</p>
+            <p class="price" th:text="${'$' + #numbers.formatDecimal(p.price, 1, 2)}">$0.00</p>
+            <form th:action="@{/cart/add/{id}(id=${p.id})}" method="post">
+                <button type="submit">Add to cart</button>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+</html>
