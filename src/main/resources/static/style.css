@@ -12,7 +12,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 14px 24px;
-    background: #1f2933;
+    background: #cc6600;
 }
 
 header a { color: #fff; text-decoration: none; }
@@ -38,7 +38,7 @@ main { max-width: 900px; margin: 24px auto; padding: 0 16px; }
 .price { font-weight: 700; font-size: 1.1rem; }
 
 button {
-    background: #2563eb;
+    background: #eb5625;
     color: #fff;
     border: 0;
     border-radius: 6px;
@@ -46,7 +46,7 @@ button {
     cursor: pointer;
     font-size: .95rem;
 }
-button:hover { background: #1d4ed8; }
+button:hover { background: #9a3b08; }
 button.secondary { background: #e4e7eb; color: #1f2933; }
 button.secondary:hover { background: #cbd2d9; }
 
